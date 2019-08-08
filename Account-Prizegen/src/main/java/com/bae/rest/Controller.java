@@ -2,6 +2,7 @@ package com.bae.rest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import com.bae.service.PrizegenService;
 
@@ -18,9 +19,9 @@ public class Controller {
 	
 	
 	
-	@GetMapping("/prize")
-	public String getPrizes() {
-		return service.prizeGen();
+	@GetMapping("/prize/{AccountNumber}")
+	public String getPrizes(@PathVariable String AccountNumber) {
+		return service.prizeGen(AccountNumber);
 	}
 	
 }

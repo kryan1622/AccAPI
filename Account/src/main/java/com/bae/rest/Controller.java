@@ -44,7 +44,7 @@ public class Controller {
 	@PostMapping("/createAccount")
 	public Account createAccount(@RequestBody Account account) {
 		String AccountNumber = restTemplate.getForObject("http://localhost:8082/num", String.class);
-		String prizeWon = restTemplate.getForObject("http://localhost:8081/prize", String.class);
+		String prizeWon = restTemplate.getForObject("http://localhost:8081/prize/{AccountNumber}", String.class, AccountNumber);
 		
 		account.setPrize(prizeWon);
 		account.setAccountNumber(AccountNumber);

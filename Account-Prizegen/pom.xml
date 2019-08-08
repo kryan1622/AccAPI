@@ -11,7 +11,7 @@
 	<groupId>com.bae</groupId>
 	<artifactId>ComponentExample-2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>ComponentExample-2</name>
+	<name>Prizegenerator</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>

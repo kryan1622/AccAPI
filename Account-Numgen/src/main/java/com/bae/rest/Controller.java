@@ -20,7 +20,7 @@ public Controller(NumgenService service) {
 
 
 @GetMapping("/num")
-public int getNumber() {
+public String getNumber() {
 	return service.getRandomNumberString();
 }
 
